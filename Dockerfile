@@ -12,6 +12,6 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 ENV ASPNETCORE_ENVIRONMENT=Production
-EXPOSE 5000
+ENV PORT=5000
 
 ENTRYPOINT ["dotnet", "APISWAGGER.dll"]
